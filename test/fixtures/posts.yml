@@ -1,0 +1,57 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zipcode: MyString
+  rent: 1
+  rooms_in_house: 1
+  size: 1
+  private_bathroom: false
+  private_entrance: false
+  cats: false
+  dogs: false
+  pet_rent: 1
+  tenants: 1
+  gender_preference: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  image6: MyString
+  image7: MyString
+  image8: MyString
+  image9: MyString
+  image10: MyString
+  image11: MyString
+  image12: MyString
+  image13: MyString
+  image14: MyString
+  image15: MyString
+
+two:
+  zipcode: MyString
+  rent: 1
+  rooms_in_house: 1
+  size: 1
+  private_bathroom: false
+  private_entrance: false
+  cats: false
+  dogs: false
+  pet_rent: 1
+  tenants: 1
+  gender_preference: MyString
+  image1: MyString
+  image2: MyString
+  image3: MyString
+  image4: MyString
+  image5: MyString
+  image6: MyString
+  image7: MyString
+  image8: MyString
+  image9: MyString
+  image10: MyString
+  image11: MyString
+  image12: MyString
+  image13: MyString
+  image14: MyString
+  image15: MyString
