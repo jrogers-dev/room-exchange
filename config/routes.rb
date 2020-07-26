@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post "/login", to: "session#create"
 
   get "/register", to: "welcome#register"
+  get "/dashboard", to: "users#show"
   
   root "welcome#home"
 

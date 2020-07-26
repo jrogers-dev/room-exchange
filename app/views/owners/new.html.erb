@@ -1,0 +1,9 @@
+<h1>OWNER REGISTRATION PAGE</h1>
+
+<%= form_for Owner.new do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.text_field :password_digest %>
+    <%= f.submit "Register" %>
+<% end %>
