@@ -14,8 +14,8 @@ class SessionController < ApplicationController
 
         if @client.authenticate(params[:password])
             session[:email] = @client.email
-            session[:type] = @client.class.name
-            redirect_to "/dashboard"
+            session[:type] = @client.class.name.downcase
+            redirect_to "/#{session[:type]}s/dashboard"
         else
             redirect_to "/login"
         end
