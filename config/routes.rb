@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :posts
   resources :owners
+  resources :messages
   resources :users do
     resources :favorites
-    resources :messages
+    resources :comments
   end
   
   get "/login", to: "session#new"
