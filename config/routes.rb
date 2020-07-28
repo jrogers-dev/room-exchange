@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :owners
   resources :messages
+  
   resources :users do
     resources :favorites
     resources :comments

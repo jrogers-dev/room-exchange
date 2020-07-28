@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2020_07_27_013028) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
     t.string "zipcode"
     t.integer "rent"
     t.integer "rooms_in_house"
