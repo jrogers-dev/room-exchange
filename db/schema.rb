@@ -14,20 +14,26 @@ ActiveRecord::Schema.define(version: 2020_07_27_013028) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
     t.string "subject"
     t.text "content"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "owners", force: :cascade do |t|
@@ -67,8 +73,10 @@ ActiveRecord::Schema.define(version: 2020_07_27_013028) do
     t.string "image13"
     t.string "image14"
     t.string "image15"
+    t.integer "owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["owner_id"], name: "index_posts_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|

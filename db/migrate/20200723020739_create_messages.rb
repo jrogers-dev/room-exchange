@@ -3,6 +3,7 @@ class CreateMessages < ActiveRecord::Migration[6.0]
     create_table :messages do |t|
       t.string :subject
       t.text :content
+      t.belongs_to :user, index: true
 
       t.timestamps
     end

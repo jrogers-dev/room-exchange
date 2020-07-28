@@ -5,11 +5,13 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-        if @post.save
-            redirect_to post_path(@post)
-        else
-            render :new
-        end
+        @owner = Owner.find_by(email: session[:email])
+        @owner.posts << @post
+        redirect_to post_path(@post)
+    end
+
+    def show
+        @post = Post.find_by(params[:id])
     end
 
     private

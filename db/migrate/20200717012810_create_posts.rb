@@ -29,7 +29,7 @@ class CreatePosts < ActiveRecord::Migration[6.0]
       t.string :image13
       t.string :image14
       t.string :image15
-
+      t.belongs_to :owner, index: true
       t.timestamps
     end
   end
