@@ -25,3 +25,14 @@
 <%= @post.image13 %><br>
 <%= @post.image14 %><br>
 <%= @post.image15 %><br>
+<br>
+<br>
+<% if session[:type] == "user" %>
+    <%= form_for Favorite.new do |f| %>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit "Add to Favorites" %>
+    <% end %>
+    
+    <%= link_to "Message Owner", new_message_path %>
+    <%= link_to "Add Comment", new_user_comment_path %>
+<% end %>
