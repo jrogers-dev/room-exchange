@@ -2,5 +2,5 @@
 <ul>
     <li><%= link_to "Search Posts", posts_path %></li>
     <li><%= link_to "Messages", messages_path %></li>
-    <li><%= link_to "Favorites", favorites_path %></li>
+    <li><%= link_to "Favorites", user_favorites_path(user_id: @user.id) %></li>
 </ul>
