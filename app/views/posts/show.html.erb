@@ -28,7 +28,7 @@
 <br>
 <br>
 <% if session[:type] == "user" %>
-    <%= form_with(url: "/favorite", method: "post") do |f| %>
+    <%= form_with(url: "/users/#{@user.id}/favorites", method: "post") do |f| %>
         <%= f.hidden_field(:post_id, value: @post.id) %>
         <%= f.submit "Add to Favorites" %>
     <% end %>

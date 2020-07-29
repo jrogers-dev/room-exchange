@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get "/users/dashboard", to: "users#show"
   get "/owners/dashboard", to: "owners#show"
 
-  post "/favorite", to: "favorites#create"
+  #post "/favorite", to: "favorites#create"
 
   root "welcome#home"
 

@@ -1,0 +1,5 @@
+<h1>Your Favorites</h1>
+
+<% @favorites.each do |f| %>
+    <%= link_to Post.find(f.post_id).title, post_path(f.post_id) %>
+<% end %>
